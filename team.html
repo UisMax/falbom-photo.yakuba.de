@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PHOTO-gallery by name</title>
+
+    <!-- Подключаем reset.css CSS -->
+    <link rel="stylesheet" href="reset.css" />
+
+    <!-- Подключаем reset.css CSS -->
+    <link rel="stylesheet" href="team.css" />
+
+    <!-- Подключаем стили style.css CSS -->
+    <!-- <link rel="stylesheet" href="about.css"> -->
+
+    <!-- <script src="script.js" defer></script> -->
+
+    <!-- Подключаем шрифт font link-->
+    <link
+      href="https://fonts.googleapis.com/css?family=Nunito"
+      rel="stylesheet"
+      type="text/css"
+    />
+
+    <!-- Ссылка на иконки для адаптации fontwesome link-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <!--  Ссылка для элементов контроля стилей css fancybox PHOTO-gallery link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"
+    />
+
+    <!-- swiperjs link  -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- НАЧАЛО секции HEADER header section start-->
+    <header>
+      <!-- Блок ЛОГО -->
+      <a href="#" class="logo"> <span>Family</span> PHOTO <span>Album</span></a>
+      <!-- Анимационное меню и крестик -->
+      <input type="checkbox" id="menu" />
+      <label for="menu">
+        <i class="fas fa-bars"></i>
+        <i class="fas fa-times"></i>
+      </label>
+
+      <!-- Блок ненумерованный списсок 6пунктов -->
+      <nav class="navbar">
+        <ul>
+          <li><a href="index.html">Best PHOTO</a></li>
+          <li>
+            <a href="about.html">PHOTO-gallery by date &bigtriangledown; </a>
+            <ul>
+              <li>
+                <a href="#">2022-2025 &bigtriangledown; </a>
+                <ul>
+                  <li><a href="#">2026</a></li>
+                  <li><a href="#">2025</a></li>
+                  <li><a href="2024.html">2024</a></li>
+                  <li><a href="#">2023</a></li>
+                  <li><a href="#">2022</a></li>
+                  <li><a href="#">2019-2021</a></li>
+                  <li><a href="#">2016-2018</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">2006-2015 &bigtriangledown; </a>
+                <ul>
+                  <li><a href="#">2014-2015</a></li>
+                  <li><a href="#">2010-2013</a></li>
+                  <li><a href="#">2006-2009</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">1996-2005 &bigtriangledown; </a>
+                <ul>
+                  <li><a href="#">2003-2005</a></li>
+                  <li><a href="#">2000-2002</a></li>
+                  <li><a href="#">1996-1999</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">1985-1995 &bigtriangledown; </a>
+                <ul>
+                  <li><a href="#">1991-1995</a></li>
+                  <li><a href="#">1988-1990</a></li>
+                  <li><a href="#">1985-1987</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="1970_1984.html">1970-1984 &bigtriangledown; </a>
+                <ul>
+                  <li><a href="#">1982-1984</a></li>
+                  <li><a href="#">1980-1981</a></li>
+                  <li><a href="1970_1979.html">1970-1979</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">1954-1973 &bigtriangledown; </a>
+                <ul>
+                  <li><a href="#">1970-1973</a></li>
+                  <li><a href="#">1967-1969</a></li>
+                  <li><a href="#">1964-1966</a></li>
+                  <li><a href="#">1961-1963</a></li>
+                  <li><a href="#">1957-1960</a></li>
+                  <li><a href="#">1954-1956</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">1941-1953 &bigtriangledown; </a>
+                <ul>
+                  <li><a href="#">1950-1953</a></li>
+                  <li><a href="#">1945-1949</a></li>
+                  <li><a href="#">1941-1944</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="1900_1940.html">1908-1940 &bigtriangledown; </a>
+                <ul>
+                  <li><a href="#">1922-1940</a></li>
+                  <li><a href="#">1900-1921</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="team.html">PHOTO-gallery by name &bigtriangledown; </a>
+            <ul>
+              <li>
+                <a href="#">Семья Гуевских &bigtriangledown; </a>
+                <ul>
+                  <li><a href="#">Семья Поповых</a></li>
+                  <li><a href="#">Семья Проненко</a></li>
+                  <li><a href="#">Архив документов</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Семья Якуба &bigtriangledown;</a>
+                <ul>
+                  <li><a href="#">Семья Анатолия Якуба</a></li>
+                  <li><a href="#">Семья Вадима Якуба</a></li>
+                  <li><a href="#">Семья Горбань</a></li>
+                  <li><a href="#">Архив документов</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Семья Мизен &bigtriangledown;</a>
+                <ul>
+                  <li><a href="#">Семья Кошельник</a></li>
+                  <li><a href="#">Архив документов</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Семья Горн &bigtriangledown;</a>
+                <ul>
+                  <li><a href="#">Семья Магерамовых</a></li>
+                  <li><a href="#">Семья Меркуловых</a></li>
+                  <li><a href="#">Архив документов</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Семья Хекман &bigtriangledown;</a>
+                <ul>
+                  <li><a href="#">Архив документов</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">Кира Юрьевна &bigtriangledown;</a>
+                <ul>
+                  <li><a href="#">Архив документов</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="join.html">My VIDEO &bigtriangledown; </a>
+            <ul>
+              <li>
+                <a href="#">По дате &bigtriangledown; </a>
+                <ul>
+                  <li><a href="#">1990-стые</a></li>
+                  <li><a href="#">2000-чные.js</a></li>
+                  <li><a href="#">2010-сятые</a></li>
+                  <li><a href="#">2020-цатые</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Событие &bigtriangledown; </a></li>
+              <li>
+                <a href="#">По имени &bigtriangledown; </a>
+                <ul>
+                  <li><a href="#">JQuery</a></li>
+                  <li><a href="#">Node.js</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Места</a></li>
+            </ul>
+          </li>
+          <!-- <li><a href="#">Best PHOTOS</a></li> -->
+
+          <li><a href="contact.html">Archive</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- КОНЕЦ блок секции header section -->
+
+    <!-- НАЧАЛО блок секции home section start -->
+    <!-- Создаем блок сцекцию с классом home и с индетификатором home -->
+    <section class="home" id="home">
+      <!-- Создадим Элемент div c классом content -->
+      <div class="content">
+        <h3>
+          Листая страницы времени... <br />
+          <span>Альбом с семейными <br />фотографиями </span>
+        </h3>
+        <p>
+          Родные лица, важные события <br />Альбом семейный бережно хранит.
+          <br />И знайте корни родословные свои, <br />и детям передайте по
+          наследству. <br />Чтоб знали прорадителей своих, <br />чтоб память
+          берегли о всём семействе.
+        </p>
+
+        <!-- <a href="team.html" class="btn">PHOTO-gallery by name</a> -->
+        <a href="about.html" class="btn">PHOTO-gallery by date</a>
+
+        <p>
+          Пусть души их покой находят, а память лучшее хранит. <br />И добрым
+          словом вспоминая, мы помним, любим и скорбим...
+        </p>
+      </div>
+
+      <!-- <div class="options">
+        <div
+          class="option active"
+          style="
+            --optionBackground: url(https://66.media.tumblr.com/6fb397d822f4f9f4596dff2085b18f2e/tumblr_nzsvb4p6xS1qho82wo1_1280.jpg);
+          "
+        >
+          <div class="shadow"></div>
+          <div class="label">
+            <div class="icon">
+              <i class="fas fa-walking"></i>
+            </div>
+            <div class="info">
+              <div class="main">Blonkisoaz</div>
+              <div class="sub">Omuke trughte a otufta</div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="option"
+          style="
+            --optionBackground: url(https://66.media.tumblr.com/8b69cdde47aa952e4176b4200052abf4/tumblr_o51p7mFFF21qho82wo1_1280.jpg);
+          "
+        >
+          <div class="shadow"></div>
+          <div class="label">
+            <div class="icon">
+              <i class="fas fa-snowflake"></i>
+            </div>
+            <div class="info">
+              <div class="main">Oretemauw</div>
+              <div class="sub">Omuke trughte a otufta</div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="option"
+          style="
+            --optionBackground: url(https://66.media.tumblr.com/5af3f8303456e376ceda1517553ba786/tumblr_o4986gakjh1qho82wo1_1280.jpg);
+          "
+        >
+          <div class="shadow"></div>
+          <div class="label">
+            <div class="icon">
+              <i class="fas fa-tree"></i>
+            </div>
+            <div class="info">
+              <div class="main">Iteresuselle</div>
+              <div class="sub">Omuke trughte a otufta</div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="option"
+          style="
+            --optionBackground: url(https://66.media.tumblr.com/5516a22e0cdacaa85311ec3f8fd1e9ef/tumblr_o45jwvdsL11qho82wo1_1280.jpg);
+          "
+        >
+          <div class="shadow"></div>
+          <div class="label">
+            <div class="icon">
+              <i class="fas fa-tint"></i>
+            </div>
+            <div class="info">
+              <div class="main">Idiefe</div>
+              <div class="sub">Omuke trughte a otufta</div>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="option"
+          style="
+            --optionBackground: url(https://66.media.tumblr.com/f19901f50b79604839ca761cd6d74748/tumblr_o65rohhkQL1qho82wo1_1280.jpg);
+          "
+        >
+          <div class="shadow"></div>
+          <div class="label">
+            <div class="icon">
+              <i class="fas fa-sun"></i>
+            </div>
+            <div class="info">
+              <div class="main">Inatethi</div>
+              <div class="sub">Omuke trughte a otufta</div>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+      <!-- CodePen Home    Responsive Image Slider -->
+    <!-- <section class="blog">
+      <h2>
+        Листая страницы времени... <br />
+        <span>Альбом с семейными фотографиями </span>
+      </h2> -->
+
+
+
+
+      <div class="image-slider">
+        <section class="slider__content">
+          <button type="button" class="slider-control--button prev-button">
+            <svg
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="icon arrow-left-circle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-4.5-.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"
+              />
+            </svg>
+          </button>
+          <main class="image-display"></main>
+          <button type="button" class="slider-control--button next-button">
+            <svg
+              width="16"
+              height="16"
+              fill="currentColor"
+              class="icon arrow-right-circle"
+              viewBox="0 0 16 16"
+            >
+              <path
+                fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"
+              />
+            </svg>
+          </button>
+        </section>
+        <nav class="slider-navigation">
+          <button class="nav-button" aria-selected="true">
+            <img class="thumbnail" src="img/img-1.jpg" alt="Thumbnail 1" />
+          </button>
+          <button class="nav-button" aria-selected="false">
+            <img class="thumbnail" src="img/img-2.jpg" alt="Thumbnail 2" />
+          </button>
+          <button class="nav-button" aria-selected="false">
+            <img class="thumbnail" src="img/img-3.jpg" alt="Thumbnail 3" />
+          </button>
+          <button class="nav-button" aria-selected="false">
+            <img class="thumbnail" src="img/img-4.jpg" alt="Thumbnail 4" />
+          </button>
+          <button class="nav-button" aria-selected="false">
+            <img class="thumbnail" src="img/img-5.jpg" alt="Thumbnail 5" />
+          </button>
+          <button class="nav-button" aria-selected="false">
+            <img class="thumbnail" src="img/img-6.jpg" alt="Thumbnail 6" />
+          </button>
+        </nav>
+      </div>
+    </section>
+    <!-- CodePen Home    Responsive Image Slider -->
+
+      <!-- <a href="http://victorofvalencia-blog.tumblr.com" target="_blank" class="credit">Photos from Victor of Valencia on tumblr</a> -->
+
+      <!-- <div class="img">
+        <img src="img/happy_clients.png">
+      </div> -->
+    </section>
+    <!-- КОНЕЦ блок секции HOME-home section end -->
+
+    <!-- НАЧАЛО блок секции ЯКУБА-ГУЕВСКИЙ doctors section start  -->
+    <section id="doctors" class="doctors">
+      <div class="heading">
+        <h2>Помнить вечно... <span> Семейные Легенды</span></h2>
+        <p>
+          Род Якуба, Гуевские, Поповы, Проненко
+        </p>
+      </div>
+      <!-- <h2 class="heading"> <span>Легенды </span></h2> -->
+
+      <!-- <h2>Семейные <span>Легенды </span></h2>  -->
+
+      <div class="doctors-slider swiper">
+        <div class="wrapper swiper-wrapper">
+          <div class="slide swiper-slide">
+            <h3>Семья ЯКУБА - линия отца</h3>
+            <img src="img/doc_1.jpg" />
+            <h3>ЯКУБА Сидор Тимофеевич</h3>
+            <h4>19-е столетие - на рубеже 19-20 столетий</h4>
+            <p>
+              Из крестьян, годы жизни неизвестны<br>
+            </p>
+            <a href="#" class="btn">Смотреть страницу</a>
+          </div>
+
+          <div class="slide swiper-slide">
+            <h3>Семья ЯКУБА - линия отца</h3>
+            <img src="img/doc_1.jpg" />
+            <h3>ЯКУБА Пётр Сидорович</h3>
+            <h4>19-е столетие - 1927</h4>
+            <p>
+              <!-- Годы жизни неизвестно<br> -->Рабочий, модельщик литейного цеха, завод "Серп и Молот"
+            </p>
+            <a href="#" class="btn">Смотреть страницу</a>
+          </div>
+
+          <div class="slide swiper-slide">
+            <h3>Семья ЯКУБА - ГУЕВСКИЙ линия отца</h3>
+            <img src="img/doc_2.jpg" />
+
+            <h3>ЯКУБА Александр Петрович</h3>
+            <h4>1898 - 1945 (46 лет)</h4>
+            <p>Начальник кузнечного цеха, диспечер, завод "Серп и Молот"</p>
+            <a href="#" class="btn">Смотреть страницу</a>
+          </div>
+
+          <div class="slide swiper-slide">
+            <h3>Семья ГУЕВСКИЙ - ЯКУБА линия отца</h3>
+            <img src="img/doc_3.jpg" />
+            <h3>ЯКУБА (Гуевская) Анастасия Матвеевна</h3>
+            <h4>1901 - 1983 (81 год)</h4>
+            <p><!-- 82 года жизни <br> -->Домохозяйка, из мещан</p>
+            <a href="" class="btn">Смотреть страницу</a>
+          </div>
+
+          <div class="slide swiper-slide">
+            <h3>Семья ГУЕВСКИХ - линия отца </h3>
+            <img src="img/doc_4.jpg" />
+            <h3>ПОПОВА (Гуевская) Мария Матвеевна</h3>
+            <h4>1896 - 1992 (96 лет)</h4>
+            <p><!-- 82 года жизни <br> -->Домохозяйка, из мещан</p>
+            <a href="" class="btn">Смотреть страницу</a>
+          </div>
+
+          <div class="slide swiper-slide">
+            <h3>Семья ГУЕВСКИХ - линия отца</h3>
+            <img src="img/doc_5.jpg" />
+            <h3>ПРОНЕНКО (Гуевская) Ксения Матвеевна</h3>
+            <h4>Неизвестно - 2000</h4>
+            <p><!-- 82 года жизни <br> -->Домохозяйка, из мещан</p>
+            <a href="" class="btn">Смотреть страницу</a>
+          </div>
+
+          <div class="slide swiper-slide">
+            <h3>Семья ГУЕВСКИХ - линия отца</h3>
+            <img src="img/doc_6.jpg" />
+            <h3>ГУЕВСКИЙ Матвей Иванович и Екатерина Григорьевна</h3>
+            <h4>19-е столетие - 20-е столетие</h4>
+            <p>Мещане г. Харькова, годы жизни неизвестны</p>
+            <a href="" class="btn">Смотреть страницу</a>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- КОНЕЦ блок секции ЯКУБА-ГУЕВСКИЙ doctors section end   -->
+
+    
+
+    <!-- НАЧАЛО блок секции ЯКУБА-МИЗЕН doctors section start  -->
+    <section id="doctors" class="doctors">
+      <div class="heading">
+        <!-- <h2>Помнить вечно... <span> Семейные Легенды</span></h2> -->
+        <p>
+          Род Якуба, Мизен, Кошельник
+        </p>
+      </div>
+
+      <div class="doctors-slider swiper">
+        <div class="wrapper swiper-wrapper">
+          <div class="slide swiper-slide">
+            <h3>Семья ЯКУБА - МИЗЕН линия мамы</h3>
+            <img src="img/doc_1.jpg" />
+            <h3>ЯКУБА Анатолий Александрович</h3>
+            <h4>1922 - 1973 (51 год)</h4>
+            <p>
+              <!-- Годы жизни неизвестно<br> -->
+              Военнослужащий, майор
+            </p>
+            <a href="#" class="btn">Смотреть страницу</a>
+          </div>
+
+          <div class="slide swiper-slide">
+            <h3>Семья МИЗЕН - ЯКУБА линия мамы</h3>
+            <img src="img/doc_2.jpg" />
+
+            <h3>ЯКУБА (Мизен) Тамара Семёновна</h3>
+            <h4>1925 - 2020 (95 лет)</h4>
+            <p><!-- 47 лет жизни <br> -->Врач-эпидимиолог</p>
+            <a href="#" class="btn">Смотреть страницу</a>
+          </div>
+
+          <div class="slide swiper-slide">
+            <h3>Семья МИЗЕН - ЯКУБА линия мамы</h3>
+            <img src="img/doc_3.jpg" />
+            <h3>МИЗЕН Семён Иванович </h3>
+            <h4>1888 - 1965 (76 лет)</h4>
+            <p><!-- 82 года жизни <br> -->Врач-эпидимиолог, майор</p>
+            <a href="" class="btn">Смотреть страницу</a>
+          </div>
+
+          <div class="slide swiper-slide">
+            <h3>Семья МИЗЕН - ЯКУБА линия мамы</h3>
+            <img src="img/doc_4.jpg" />
+            <h3>МИЗЕН (Кошельник) Екатерина Ивановна</h3>
+            <h4>1904 - 1984 (79 лет)</h4>
+            <p><!-- 82 года жизни <br> -->Служащая</p>
+            <a href="" class="btn">Смотреть страницу</a>
+          </div>
+
+          <div class="slide swiper-slide">
+            <h3>Семья КОШЕЛЬНИК - линия мамы</h3>
+            <img src="img/doc_5.jpg" />
+            <h3>КОШЕЛЬНИК Иван Иванович</h3>
+            <h4>1897 - 1996</h4>
+            <p><!-- 82 года жизни <br> -->Служащий</p>
+            <a href="" class="btn">Смотреть страницу</a>
+          </div>
+
+          <div class="slide swiper-slide">
+            <h3>Семья КОШЕЛЬНИК - линия мамы</h3>
+            <img src="img/doc_6.jpg" />
+            <h3>КОШЕЛЬНИК Иван Иванович и Наталья Ивановна</h3>
+            <h4>1870-1921 - 1875-1943</h4>
+            <p><!-- 82 года жизни <br> -->Мещане</p>
+            <a href="" class="btn">Смотреть страницу</a>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- КОНЕЦ блок секции ЯКУБА-МИЗЕН doctors section end   -->
+
+
+    <!-- НАЧАЛО блок секции ЯКУБА-МИЗЕН doctors section start  -->
+    <section id="doctors" class="doctors">
+      <div class="heading">
+        <!-- <h2>Помнить вечно... <span> Семейные Легенды</span></h2> -->
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cumque
+          placeat voluptas eveniet quisquam at quaerat! Aliquam ipsum quisquam
+          delectus dolorum?
+        </p>
+      </div>
+
+      <div class="doctors-slider swiper">
+        <div class="wrapper swiper-wrapper">
+          <div class="slide swiper-slide">
+            <h3>Семья ЯКУБА - МИЗЕН линия мамы</h3>
+            <img src="img/doc_1.jpg" />
+            <h3>ЯКУБА Анатолий Александрович</h3>
+            <h4>1922 - 1973 (51 год)</h4>
+            <p>
+              <!-- Годы жизни неизвестно<br> -->
+              Военнослужащий, майор
+            </p>
+            <a href="#" class="btn">Смотреть страницу</a>
+          </div>
+
+          <div class="slide swiper-slide">
+            <h3>Семья МИЗЕН - ЯКУБА линия мамы</h3>
+            <img src="img/doc_2.jpg" />
+
+            <h3>ЯКУБА (Мизен) Тамара Семёновна</h3>
+            <h4>1925 - 2020 (95 лет)</h4>
+            <p><!-- 47 лет жизни <br> -->Врач-эпидимиолог</p>
+            <a href="#" class="btn">Смотреть страницу</a>
+          </div>
+
+          <div class="slide swiper-slide">
+            <h3>Семья МИЗЕН - ЯКУБА линия мамы</h3>
+            <img src="img/doc_3.jpg" />
+            <h3>МИЗЕН Семён Иванович </h3>
+            <h4>1888 - 1965 (76 лет)</h4>
+            <p><!-- 82 года жизни <br> -->Врач-эпидимиолог, майор</p>
+            <a href="" class="btn">Смотреть страницу</a>
+          </div>
+
+          <div class="slide swiper-slide">
+            <h3>Семья МИЗЕН - ЯКУБА линия мамы</h3>
+            <img src="img/doc_4.jpg" />
+            <h3>МИЗЕН (Кошельник) Екатерина Ивановна</h3>
+            <h4>1904 - 1984 (79 лет)</h4>
+            <p><!-- 82 года жизни <br> -->Служащая</p>
+            <a href="" class="btn">Смотреть страницу</a>
+          </div>
+
+          <div class="slide swiper-slide">
+            <h3>Семья КОШЕЛЬНИК - линия мамы</h3>
+            <img src="img/doc_5.jpg" />
+            <h3>КОШЕЛЬНИК Иван Иванович</h3>
+            <h4>1897 - 1996</h4>
+            <p><!-- 82 года жизни <br> -->Служащий</p>
+            <a href="" class="btn">Смотреть страницу</a>
+          </div>
+
+          <div class="slide swiper-slide">
+            <h3>Семья КОШЕЛЬНИК - линия мамы</h3>
+            <img src="img/doc_6.jpg" />
+            <h3>КОШЕЛЬНИК Иван Иванович и Наталья Ивановна</h3>
+            <h4>1870-1921 - 1875-1943</h4>
+            <p><!-- 82 года жизни <br> -->Мещане</p>
+            <a href="" class="btn">Смотреть страницу</a>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!-- КОНЕЦ блок секции ЯКУБА-МИЗЕН doctors section end   -->
+
+    <!-- НАЧАЛО блок сеции trainers section start -->
+    <section class="trainers">
+      <div class="box-container">
+        <div class="box">
+          <img src="img/team/trainer-1.jpg" alt="trainer" />
+          <div class="box-content">
+            <h4>ЯКУБА Анатолий Александрович</h4>
+            <p>1922-1973</p>
+            <a href="" class="btn">Bio</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img/team/trainer-1.jpg" alt="trainer" />
+          <div class="box-content">
+            <h4>Name Surname</h4>
+            <p>Trainer</p>
+            <a href="" class="btn">Bio</a>
+          </div>
+        </div>
+        <div class="box">
+          <img src="img/team/trainer-2.jpg" alt="trainer" />
+          <div class="box-content">
+            <h4>Name Surname</h4>
+            <p>Trainer</p>
+            <a href="" class="btn">Bio</a>
+          </div>
+        </div>
+        <!-- <div class="box">
+          <img src="img/team/trainer-3.jpg" alt="trainer" />
+          <div class="box-content">
+            <h4>Name Surname</h4>
+            <p>Trainer</p>
+            <a href="" class="btn">Bio</a>
+          </div>
+        </div> -->
+        <!-- <div class="box">
+          <img src="img/team/trainer-4.jpg" alt="trainer" />
+          <div class="box-content">
+            <h4>Name Surname</h4>
+            <p>Trainer</p>
+            <a href="" class="btn">Bio</a>
+          </div>
+        </div> -->
+        <!-- <div class="box">
+          <img src="img/team/trainer-5.jpg" alt="trainer" />
+          <div class="box-content">
+            <h4>Name Surname</h4>
+            <p>Trainer</p>
+            <a href="" class="btn">Bio</a>
+          </div>
+        </div> -->
+        <!-- <div class="box">
+          <img src="img/team/trainer-6.jpg" alt="trainer" />
+          <div class="box-content">
+            <h4>Name Surname</h4>
+            <p>Trainer</p>
+            <a href="" class="btn">Bio</a>
+          </div>
+        </div> -->
+        <!-- <div class="box">
+          <img src="img/team/trainer-7.jpg" alt="trainer" />
+          <div class="box-content">
+            <h4>Name Surname</h4>
+            <p>Trainer</p>
+            <a href="" class="btn">Bio</a>
+          </div>
+        </div> -->
+        <div class="box">
+          <img src="img/team/trainer-8.jpg" alt="trainer" />
+          <div class="box-content">
+            <h4>Name Surname</h4>
+            <p>Trainer</p>
+            <a href="" class="btn">Bio</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- КОНЕЦ блок  сеции trainers section end -->
+
+    <!-- НАЧАЛО секции TEAM team section start -->
+    <section class="team">
+      <h2>Семейный альбом - наша история</h2>
+
+      <!-- CodePen Home Card Carousel -->
+
+      <!-- CodePen Home Card Carousel -->
+
+      <a href="index.html" class="btn">Best PHOTO</a>
+    </section>
+    <!-- КОНЕЦ секции TEAM team section end -->
+
+    <!-- НАЧАЛО секции с классом FOOTER footer section start -->
+    <section class="footer">
+      <!-- Меню список кнопок в футуре -->
+      <div class="menu">
+        <a href="index.html" class="btn">Best PHOTO</a>
+        <a href="about.html" class="btn">PHOTO-gallery by date</a>
+        <a href="team" class="btn">PHOTO-gallery by name</a>
+        <a href="join.html" class="btn">My VIDEO</a>
+        <a href="contact.html" class="btn">Archive</a>
+      </div>
+
+      <h3 class="copyright">
+        &copy;2025 All rights Reserved <span>Coding UisMax</span> |
+        <a href="page.html" target="_blank">Impressum & Datenschutz</a>
+      </h3>
+    </section>
+    <!-- КОНЕЦ блок секции с классом FOOTER footer section end -->
+
+    <!-- scroll top btn  -->
+    <div class="scroll-top">
+      <i class="fa fa-arrow-up"></i>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="100%"
+        height="100%"
+        viewBox="-1 -1 102 102"
+      >
+        <path
+          d="M50,1 a49,49 0 0,1 0,98 a49,49 0 0,1 0,-98"
+          style="
+            stroke-dasharray: 307.919, 307.919;
+            stroke-dashoffset: 0.0228267;
+            transition: stroke-dashoffset 10ms linear;
+          "
+        />
+      </svg>
+    </div>
+
+    <!-- jQuery link JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- swiperjs script  -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".services-slider", {
+        spaceBetween: 20,
+        grabCursor: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          540: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
+
+    <script>
+      var swiper = new Swiper(".doctors-slider", {
+        spaceBetween: 20,
+        grabCursor: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          540: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
+
+    <script>
+      var swiper = new Swiper(".review-slider", {
+        spaceBetween: 20,
+        grabCursor: true,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        breakpoints: {
+          540: {
+            slidesPerView: 1,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          1024: {
+            slidesPerView: 3,
+          },
+        },
+      });
+    </script>
+    <!-- Initialize Swiper -->
+
+    <script>
+      let menu = document.querySelector("#menu-btn");
+      let navbar = document.querySelector(".navbar");
+
+      menu.onclick = () => {
+        menu.classList.toggle("fa-times");
+        navbar.classList.toggle("active");
+      };
+    </script>
+
+
+
+    <script>
+      // CodePen Home    Responsive Image Slider
+      class Slider {
+  constructor(slider) {
+      this.slider = slider;
+      this.display = slider.querySelector(".image-display");
+      this.navButtons = Array.from(slider.querySelectorAll(".nav-button"));
+      this.prevButton = slider.querySelector(".prev-button");
+      this.nextButton = slider.querySelector(".next-button");
+      this.sliderNavigation = slider.querySelector(".slider-navigation");
+      this.currentSlideIndex = 0;
+      this.preloadedImages = {};
+
+      this.initialize();
+  }
+
+  initialize() {
+      this.setupSlider();
+      this.preloadImages();
+      this.eventListeners();
+  }
+
+  setupSlider() {
+      this.showSlide(this.currentSlideIndex);
+  }
+
+  showSlide(index) {
+      this.currentSlideIndex = index;
+      const navButtonImg = this.navButtons[
+          this.currentSlideIndex
+      ].querySelector("img");
+      if (navButtonImg) {
+          const imgClone = navButtonImg.cloneNode();
+          this.display.replaceChildren(imgClone);
+      }
+      this.updateNavButtons();
+  }
+
+  updateNavButtons() {
+      this.navButtons.forEach((button, buttonIndex) => {
+          const isSelected = buttonIndex === this.currentSlideIndex;
+          button.setAttribute("aria-selected", isSelected);
+          if (isSelected) button.focus();
+      });
+  }
+
+  preloadImages() {
+      this.navButtons.forEach((button) => {
+          const imgElement = button.querySelector("img");
+          if (imgElement) {
+              const imgSrc = imgElement.src;
+              if (!this.preloadedImages[imgSrc]) {
+                  this.preloadedImages[imgSrc] = new Image();
+                  this.preloadedImages[imgSrc].src = imgSrc;
+              }
+          }
+      });
+  }
+
+  eventListeners() {
+      document.addEventListener("keydown", (event) => {
+          this.handleAction(event.key);
+      });
+
+      this.sliderNavigation.addEventListener("click", (event) => {
+          const targetButton = event.target.closest(".nav-button");
+          const index = targetButton
+              ? this.navButtons.indexOf(targetButton)
+              : -1;
+          if (index !== -1) {
+              this.showSlide(index);
+          }
+      });
+
+      this.prevButton.addEventListener("click", () =>
+          this.handleAction("prev")
+      );
+      this.nextButton.addEventListener("click", () =>
+          this.handleAction("next")
+      );
+  }
+
+  handleAction(action) {
+      if (action === "Home") {
+          this.currentSlideIndex = 0;
+      } else if (action === "End") {
+          this.currentSlideIndex = this.navButtons.length - 1;
+      } else if (action === "ArrowRight" || action === "next") {
+          this.currentSlideIndex =
+              (this.currentSlideIndex + 1) % this.navButtons.length;
+      } else if (action === "ArrowLeft" || action === "prev") {
+          this.currentSlideIndex =
+              (this.currentSlideIndex - 1 + this.navButtons.length) %
+              this.navButtons.length;
+      }
+
+      this.showSlide(this.currentSlideIndex);
+  }
+}
+
+const ImageSlider = new Slider(document.querySelector(".image-slider"));
+// CodePen Home    Responsive Image Slider  
+    </script>
+
+
+    <!-- Ссылка для элементов контроля на fancybox PHOTO-gallery для script link  -->
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+
+    <!-- Custom script file  -->
+    <script src="script.js"></script>
+  </body>
+</html>

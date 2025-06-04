@@ -1,0 +1,951 @@
+/* Global CSS style start  */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  text-decoration: none;
+  list-style: none;
+  text-transform: none;
+  font-family: "Nunito", sans-serif;
+  transition: all 0.3s linear;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --blue: #0663a2;
+  --main-color: #239FDD;
+  --light-blue: #28a3f7;
+  --yellow-clr: #FAD02C;
+  --green: #19a846;
+  --hover: #f96900;
+  --grey: #ddd;
+  --border: 0.1rem solid rgba(0, 0, 0, 0.1);
+  --box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+  --gradient: linear-gradient(45deg, var(--blue), var(--light-blue));
+  --logo-fz: calc(
+    20px + (35 - 20) * ((100vw - 300px) / 1600 - 300)
+  ); /*  logo шрифт */
+  --small-fz: calc(
+    12px + (15 - 12) * ((100vw - 300px) / 1600 - 300)
+  ); /* Маленький шрифт */
+  --medium-fz: calc(
+    14px + (20 - 14) * ((100vw - 300px) / 1600 - 300)
+  ); /* Средний малый шрифт */
+  --large-fz: calc(
+    20px + (35 - 20) * ((100vw - 300px) / 1600 - 300)
+  ); /* Средний шрифт */
+  --biggest-fz: calc(
+    30px + (80 - 30) * ((100vw - 300px) / 1600 - 300)
+  ); /* Очень большой шрифт */
+  --number-icons: calc(25px + (40 - 25) * ((100vw - 300px) / 1600 - 300));
+
+  
+  --active-color: hsl(204 100 53);
+  --bg-color: #e1e3e5;
+  --icon-default: hsl(203 5 75);
+  --icon-accent: hsl(203 15 98);
+  --navigation-color: hsl(203 5 25 / 0.3);
+  
+  /* --index: calc(1vw + 1vh);
+--transition: cubic-bezier(.1, .7, 0, 1); */
+}
+
+*::selection {
+  background: var(--yellow-clr);
+  color: var(--white);
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: #353535;
+  /* min-height: 500vh; */
+}
+
+section {
+  padding: 2rem 4%;
+}
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: var(--main-color);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--black);
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.8rem 3rem;
+  font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1600 - 300)));
+  border: 0.2rem solid var(--main-color);
+  color: var(--main-color);
+  background: transparent;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  margin: 1rem;
+  overflow: hidden;
+  position: relative;
+  z-index: 0;
+}
+.btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 0%;
+  height: 100%;
+  background: var(--light-blue);
+  z-index: -1;
+  transition: 0.3s;
+}
+.btn:hover::before {
+  width: 100%;
+  left: 0;
+}
+.btn:hover {
+  color: var(--white);
+}
+/* Global CSS style end  */
+
+/* .heading {
+  margin-bottom: 2.5rem;
+  text-align: center; */
+  /* color: var(--white-clr); */
+  /* color: var(--white); */
+  /* font-size: var(--biggest-fz); */
+  /* font-size: calc(25px + (35 - 25) * ((100vw - 300px) / (1600 - 300)));
+} */
+/* .heading span {
+  color: var(--main-color); */
+  /* color: #19a846; */
+/* } */
+
+/* НАЧАЛО секции header */
+/* Стили для всего header */
+header {
+  position: fixed; /* Зафиксируем сверху */
+  width: 100%;
+  top: 0; /* Сдвиг вверрх 0 нет */
+  left: 0; /* Сдиг в лево 0 нет */
+  right: 0; /* Сдвиг в право 0 нет */
+  /* background: #fff; */ /* Фон цвет белый */
+  background-color: #353535;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.8); /* Тень для блока */
+  padding: 1rem 7%; /* Внутренний отступ сверху/снизу0 справа/слева 8% */
+  display: flex; /* Размещение по блока  */
+  justify-content: space-between; /* Разведем блоки по разные стороны */
+  align-items: center; /* размещение блоков по центру осей */
+  z-index: 100;
+}
+/* Стили для Лого */
+header .logo {
+  /* color: #151515;  */ /* цвет лого черный */
+  color: var(--main-color);
+  /* font-size: 3rem; */
+  font-size: 1.5rem;
+  font-weight: 800; /* насыщеность шрифта 900 */
+  transition: 0.5s; /* плавный ховер-эфект 0.5сек*/
+}
+header .logo span {
+  color: var(--yellow-clr);
+}
+header .logo:hover {
+  letter-spacing: 0.5rem; /* растояние между буквами 1-3рем */
+  transform: scale(1.1); /* эффект увеличения 1,1-1,5 */
+}
+/* блок ненумерованный списсок 6пунктов */
+header .navbar ul {
+  display: flex;
+  /* position: relative;
+  float: left; */
+  list-style: none;
+}
+header .navbar ul li {
+  position: relative;
+}
+
+header .navbar ul li a {
+  display: block;
+  padding: 1.5rem;
+  /* color: #151515; */
+  color: var(--main-color);
+  /* font-size: calc(20px + (35 - 20) * ((100vw - 300px) / 1600 - 300)); */
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+
+header .navbar ul li a:hover {
+  /* background-color: #000; */
+  background: var(--light-blue);
+  color: var(--white);
+}
+
+header .navbar ul li ul {
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  width: 18rem;
+  background: var(--white);
+  display: none;
+}
+
+header .navbar ul li ul li {
+  flex-direction: column;
+  width: 100%;
+  border: 0.1rem solid rgba(0, 0, 0, 0.1);
+}
+
+header .navbar ul li ul li ul {
+  position: absolute;
+  left: 18rem;
+  top: 0;
+}
+
+header .navbar ul li:hover > ul {
+  display: initial;
+}
+
+#menu {
+  display: none;
+}
+
+header label {
+  font-size: 2rem;
+  /* color: #151515; */
+  color: var(--blue);
+  cursor: pointer;
+  display: none;
+}
+/* КОНЕЦ секции header section */
+
+/* НАЧАЛО блок секции HOME-home section start */
+/* CodePen Home Expanding flex cards*/
+/* $optionDefaultColours: #ED5565,#FC6E51,#FFCE54,#2ECC71,#5D9CEC,#AC92EC; */
+.home {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  min-height: 100vh;
+  /* background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6)),
+    url(img/about/about-bg.jpg) no-repeat center/cover; */
+  background: #555555;
+  transition: 0.25s;
+  gap: 12rem;    /* отступ между элементами внутри флексбокса */
+}
+.home .content {
+  /* flex: 10 1 40rem;  */ /* текст слева изображение справа */
+  /* text-align: center; */
+  padding-top: 5rem;
+}
+.home .content h3 {
+  color: var(--white);
+  font-size: calc(25px + (35 - 25) * ((100vw - 300px) / (1600 - 300)));
+}
+.home .content h3 span {
+  color: var(--main-color);
+}
+.home .content p {
+  color: var(--white);
+  font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
+}
+
+/* .home .row .img {
+  flex: 1 1 40rem;
+  text-align: center;
+} */
+
+
+
+
+/* CodePen Home    Responsive Image Slider */
+
+
+.blog {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-block-size: 90vh;
+  
+  
+}
+
+
+
+
+
+.image-slider {
+  
+  display: flex;
+  flex-flow: column;
+  width: clamp(360px, 96vw, 830px);
+  aspect-ratio: 16 / 9;
+  min-height: 500px;
+  overflow: hidden;
+  border-radius: 1rem;
+  border: 2px solid #28a3f7;
+  container-type: inline-size;
+  contain: content;
+  background-color: #0006;
+  box-shadow: rgba(0, 0, 0, 0.2) 0px 1px 2px, rgba(0, 0, 0, 0.3) 0px 2px 4px,
+    rgba(0, 0, 0, 0.25) 0px 4px 8px, rgba(0, 0, 0, 0.2) 0px 8px 16px,
+    rgba(0, 0, 0, 0.15) 0px 16px 32px;
+}
+
+.slider__content {
+  flex-grow: 1;
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-control--button {
+  border: 0;
+  background: 0;
+  outline: 0;
+  cursor: pointer;
+  place-content: center;
+  padding-inline: 3vw;
+  z-index: 1;
+  display: grid;
+}
+
+.icon {
+  height: 2rem;
+  width: 2rem;
+  fill: var(--icon-default);
+  border-radius: 50%;
+}
+
+.slider-control--button:where(:hover) {
+  background-image: linear-gradient(
+    to var(--position),
+    #0000 0%,
+    #0002,
+    80%,
+    #0006 100%
+  );
+  .icon {
+    fill: var(--icon-accent);
+    background: #0001;
+  }
+}
+
+.slider-control--button:active {
+  outline: 0.2em solid hsl(204 100 53);
+  outline-offset: -0.5em;
+}
+
+.prev-button {
+  --position: left;
+}
+.next-button {
+  --position: right;
+}
+
+.image-display {
+  position: fixed;
+  inset: 0;
+}
+
+.slider-navigation {
+  z-index: 10;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: repeat(6, 1fr);
+  grid-auto-columns: 100%;
+  gap: 1.25rem;
+  padding: 1rem;
+  place-content: center;
+  background-color: var(--navigation-color);
+  backdrop-filter: blur(6px);
+}
+
+.nav-button {
+  display: grid;
+  width: 100%;
+  height: 100%;
+  border-radius: 0.5em;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  border: 0;
+  aspect-ratio: 16 / 9;
+  transition: filter 150ms linear, scale 266ms ease;
+}
+
+.thumbnail {
+  display: block;
+  max-width: 100%;
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+
+.nav-button[aria-selected="true"] {
+  scale: 1.1;
+}
+
+.nav-button[aria-selected="true"],
+.nav-button:focus-visible {
+  outline: 0.2em solid var(--active-color);
+  outline-offset: 0.2em;
+}
+
+.nav-button[aria-selected="false"] {
+  filter: opacity(0.7);
+}
+
+.nav-button[aria-selected="false"]:where(:hover, :focus-visible) {
+  filter: opacity(1);
+}
+
+@container (max-width: 660px) {
+  .nav-button:not(:has(img)) {
+    background-color: rgb(241, 235, 232);
+  }
+
+  .slider-navigation {
+    display: flex;
+    justify-content: center;
+    padding-block: 1.5em;
+  }
+
+  .nav-button {
+    inline-size: 0.625rem;
+    aspect-ratio: 1;
+    border-radius: 50%;
+  }
+
+  .nav-button > .thumbnail {
+    display: none;
+  }
+
+  .nav-button[aria-selected="true"] {
+    background-color: black;
+    scale: 1.5;
+  }
+}
+/* CodePen Home    Responsive Image Slider*/
+
+
+/* .options {
+  display: flex;
+  flex-direction: row;
+  align-items: stretch;
+  overflow: hidden;
+
+  min-width: 600px;
+  max-width: 900px;
+  width: calc(100% - 100px);
+
+  height: 400px;
+
+  @for $i from 1 through 4 {
+    @media screen and (max-width: 798px - $i*80) {
+      min-width: 600px - $i * 80;
+      .option:nth-child(#{6-$i}) {
+        display: none;
+      }
+    }
+  }
+  .option {
+    position: relative;
+    overflow: hidden;
+
+    min-width: 60px;
+    margin: 10px;
+    border: 0.2rem solid var(--main-color);
+
+    background: var(--optionBackground, var(--defaultBackground, #e6e9ed));
+    background-size: auto 120%;
+    background-position: center;
+
+    cursor: pointer;
+
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+
+    @for $i from 1 through length($optionDefaultColours) {
+      &:nth-child(#{$i}) {
+        --defaultBackground: #{nth($optionDefaultColours, $i)};
+      }
+    }
+    &.active {
+      flex-grow: 10000;
+      transform: scale(1);
+
+      max-width: 600px;
+      margin: 0px;
+      border-radius: 40px;
+
+      background-size: auto 100%;
+      .shadow {
+        box-shadow: inset 0 -120px 120px -120px black,
+          inset 0 -120px 120px -100px black;
+      }
+      .label {
+        bottom: 20px;
+        left: 20px;
+        .info > div {
+          left: 0px;
+          opacity: 1;
+        }
+      } */
+      /* &:active {
+        transform: scale(0.9);
+      } */
+    /* }
+    &:not(.active) {
+      flex-grow: 1;
+
+      border-radius: 30px;
+      .shadow {
+        bottom: -40px;
+        box-shadow: inset 0 -120px 0px -120px black,
+          inset 0 -120px 0px -100px black;
+      }
+      .label {
+        bottom: 10px;
+        left: 10px;
+        .info > div {
+          left: 20px;
+          opacity: 0;
+        }
+      }
+    }
+    .shadow {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+
+      height: 120px;
+
+      transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+    }
+    .label {
+      display: flex;
+      position: absolute;
+      right: 0px;
+
+      height: 40px;
+      transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+      .icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        min-width: 40px;
+        max-width: 40px;
+        height: 40px;
+        border-radius: 100%;
+
+        background-color: var(--white);
+        color: var(--main-color);
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        margin-left: 10px;
+
+        color: var(--white);
+
+        white-space: pre;
+        > div {
+          position: relative;
+
+          transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95),
+            opacity 0.5s ease-out;
+        }
+        .main {
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+        .sub {
+          transition-delay: 0.1s;
+        }
+      }
+    }
+  }
+} */
+/* CodePen Home Expanding flex cards*/
+
+/* .home .wrapper {
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  min-width: 320px;
+}
+
+.home .options {
+  display: flex;
+  flex-direction: row;
+  min-width: 480px;
+  max-width: calc(var(--total-options) * 130px);
+  height: var(--option-height);
+  width: 100%;
+}
+
+.home .option {
+  background-color: color-mix(in srgb, var(--bg), CanvasText 10%);
+  margin: var(--gutter);
+  flex-grow: 1;
+  border-radius: var(--radius);
+  flex: 0 0 var(--option-width);
+  transition: flex-grow 1.25s cubic-bezier(.17, .84, .44, 1);
+  background-position: center;
+  background-size: cover;
+}
+
+.home .option:not(.active) {
+  cursor: pointer;
+}
+
+.home .option.active {
+  flex-grow: var(--total-options);
+} */
+
+/* Уточнение: данный брейкпоинт для max-width является sm. */
+/* max-width брейкпоинты имеют отступ (-0.02px), чтобы избежать перекрытия с min-width. */
+/* @media (max-width: 767.98px) {
+  .home .options {
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: auto;
+  }
+} */
+
+/* КОНЕЦ блок секции HOME-home section end */
+
+/* НАЧАЛО блок секции ЯКУБА-ГУЕВСКИЙ doctors section start */
+.doctors {
+  min-height: 100vh;
+  /* background-color: var(--grey); */
+  background: linear-gradient(rgba(0, 0, 0, 0.01), rgba(0, 0, 0, 0.01)),
+    url(img/team/team-bg2.jpg) no-repeat center/cover;
+  text-align: center;
+}
+.doctors .heading h2 {
+  text-align: center;
+  font-size: calc(18px + (35 - 18) * ((100vw - 300px) / (1600 - 300)));
+  padding: 1rem;
+  color: var(--blue);
+}
+.heading h2 span {
+  background: var(--yellow-clr);
+  color: var(--blue);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.heading p {
+  color: var(--blue);
+  font-size: calc(14px + (120 - 114) * ((100vw - 300px) / (1600 - 300)));
+  padding: 1rem;
+}
+
+.doctors .slide {
+  width: 30rem;
+  background: var(--yellow-clr);
+  /* background-color: var(--yellow-clr); */
+  border-radius: 0.5rem;
+  text-align: center;
+  margin-bottom: 4rem;
+  border: 0.2rem solid var(--white);
+  /* box-shadow: var(--box-shadow); */
+  box-shadow: 0 0.8rem 1rem rgba(0, 0, 0, 0.2);
+  padding: 0.5rem;
+}
+
+.doctors .slide img {
+  width: 40rem;
+  height:30rem;
+  /* border-radius: 50%; */
+  object-fit: cover;
+  /* border: .5rem solid var(--light-blue); */
+  /* border: .5rem solid #19a846; */
+  border: 0.2rem solid var(--white);
+  box-shadow: 0 0.8rem 1rem rgba(0, 0, 0, 0.5);
+}
+
+.doctors .slide h3 {
+  margin: 1.5rem 0rem;
+  /* font-size: var(--large-fz); */
+  font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
+  color: var(--blue);
+}
+.doctors .slide h4 {
+  /* margin: .5rem 0rem; */
+  /* font-size: var(--large-fz); */
+  font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1600 - 300)));
+  color: var(--blue);
+}
+
+.doctors .slide p {
+  /* font-size: var(--small-fz); */
+  font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1600 - 300)));
+  text-align: center;
+  /* padding: 1rem; */
+  /* color: var(--light-blue); */
+  color: var(--blue);
+}
+/* doctors section end  */
+
+/* trainers section start */
+.trainers {
+  min-height: 100vh;
+  background: #282828;
+}
+
+.trainers .box-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 90%;
+  margin: 0 auto;
+  gap: 1.5rem;
+}
+
+.trainers .box-container .box {
+  flex: 1 1 25rem;
+  border: 0.2rem solid var(--yellow-clr);
+  text-align: center;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.trainers .box-container .box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.trainers .box-container .box .box-content {
+  color: var(--white);
+}
+
+.trainers .box-container .box .box-content h4 {
+  font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.trainers .box-container .box .box-content p {
+  font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+  padding: 1rem;
+}
+/* КОНЕЦ блок  сеции trainers section end */
+
+/* НАЧАЛО секции TEAM team section start */
+.team {
+  min-height: 60vh;
+  background: url(img/team/team-bg.jpg) no-repeat center/cover;
+
+  border-image: fill 0 linear-gradient(#0003, #000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  /* CodePen Home Card Carousel */
+ 
+  /* CodePen Home Card Carousel */
+}
+
+.team h2 {
+  color: var(--white);
+  font-size: calc(25px + (40 - 25) * ((100vw - 300px) / (1600 - 300)));
+}
+
+
+
+
+
+
+/* CodePen Home Card Carousel */
+
+/* CodePen Home Card Carousel */
+
+/* КОНЕЦ секции TEAM team section end */
+
+
+
+/* НАЧАЛО секции с классом FOOTER footer section start */
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.footer .copyright {
+  margin-top: 3rem;
+  color: var(--yellow-clr);
+  font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.footer .copyright span {
+  color: var(--blue);
+}
+.footer .copyright a {
+  color: var(--white);
+  text-decoration: underline;
+}
+/* footer section end */
+
+/* scroll top button  */
+.scroll-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 3rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 0.2rem rgba(59, 56, 235, 0.2);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(3rem);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.scroll-top i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  color: var(--main-color);
+  transition: color 0.3s ease-in-out;
+}
+
+.scroll-top svg path {
+  fill: none;
+  stroke: var(--main-color);
+  stroke-width: 4;
+  transition: stroke 0.3s ease-in-out;
+}
+
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Адаптпция правило медиа-запросы media queries */
+@media (max-width: 1200px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 991px) {
+  header {
+    padding: 2rem;
+  }
+  header label {
+    display: initial;
+  }
+  header .navbar {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 0.1rem solid rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  header .navbar ul {
+    flex-direction: column;
+  }
+  header .navbar ul li {
+    flex-direction: column;
+    width: 100%;
+  }
+  header .navbar ul li ul {
+    position: relative;
+    width: 100%;
+  }
+  header .navbar ul li ul li {
+    /* background: #999; */
+    background: #b3ddf2;
+  }
+  header .navbar ul li ul li ul {
+    position: relative;
+    width: 100%;
+    left: 0;
+  }
+  header .navbar ul li ul li ul li {
+    /* background: #777; */
+    background: #7db8d3;
+  }
+
+  #menu:checked ~ .navbar {
+    display: initial;
+  }
+  label .fa-times {
+    display: none;
+  }
+
+  #menu:checked ~ label .fa-bars {
+    display: none;
+  }
+  #menu:checked ~ label .fa-times {
+    display: block;
+  }
+
+  section {
+    padding: 0 3%;
+    padding-top: 8rem;
+  }
+  .home {
+    flex-flow: column-reverse;
+    padding-top: 7rem;
+  }
+  .home .img img {
+    /* Изображение при адаптации */
+    width: 100%; /* Размер изображения при адаптации */
+  }
+  .home .content h2 {
+    /* Заголовок 2типа при */
+    font-size: 3.5rem; /* Размер щрифта при адаптации */
+  }
+  .home.content p {
+    font-size: 1.5rem;
+  }
+  .home .content .btn {
+    margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+/* media queries */
+
+@media (max-width: 860px) {
+  .footer .menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+}

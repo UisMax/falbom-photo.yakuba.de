@@ -1,0 +1,820 @@
+/* Global CSS style start  */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    text-transform: none;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Nunito', sans-serif;
+    transition: all .3s linear;
+}
+
+:root {
+  --black: #000;
+  --white: #fff;
+  --blue: #0663a2;
+  --main-color: #239FDD;
+  --light-blue: #28a3f7;
+  /* --yellow-clr: #ffc63d;  */
+  --yellow-clr: #FAD02C;
+  --green: #19a846;
+  --hover: #f96900;
+  --grey: #ddd;
+    --border: .1rem solid rgba(0,0,0,.1);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,.2);
+    --box-shadow: 0 .5rem 1rem rgba(0,0,0,0.5);
+    --gradient: linear-gradient(45deg, var(--blue), var(--light-blue));
+    --logo-fz: calc(20px + (35 - 20) * ((100vw - 300px) / 1600 - 300)); /*  logo шрифт */
+    --small-fz: calc(12px + (18 - 12) * ((100vw - 300px) / 1600 - 300));   /* Маленький шрифт */
+    --medium-fz: calc(14px + (20 - 14) * ((100vw - 300px) / 1600 - 300));   /* Средний малый шрифт */
+    --large-fz: calc(20px + (35 - 20) * ((100vw - 300px) / 1600 - 300));   /* Средний шрифт */
+    --biggest-fz: calc(30px + (80 - 30) * ((100vw - 300px) / 1600 - 300));  /* Очень большой шрифт */
+    --number-icons: calc(25px + (40 - 25) * ((100vw - 300px) / 1600 - 300));
+
+    --option-height: 400px;
+    --option-width: 60px;
+    --radius: 1.875rem;
+    --gutter: 10px;
+    --bg: #f5f5f5;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #1f2020;
+  }
+}
+
+*::selection {
+    background: var(--yellow-clr);
+    color: var(--white);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+
+body {
+    background: #353535;
+    /* min-height: 500vh;
+    min-width: 320px; */
+}
+
+section {
+    padding: 2rem 4%;
+}
+::-webkit-scrollbar {
+  width: 0.8rem;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 1rem;
+  background-color: var(--main-color);
+}
+::-webkit-scrollbar-track {
+  background-color: var(--black);
+}
+
+.btn {
+    display: inline-block;
+    padding: 0.8rem 3rem;
+    font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1600 - 300))); 
+    border: .2rem solid var(--main-color);
+    color: var(--main-color);
+    background: transparent;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    margin: 1rem;
+    overflow: hidden;
+    position: relative;
+    z-index: 0;
+}
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 0%;
+    height: 100%;
+    background: var(--light-blue);
+    z-index: -1;
+    transition: 0.3s;
+}
+.btn:hover::before {
+    width: 100%;
+    left: 0;
+}
+.btn:hover {
+    color: var(--white);
+}
+/* Global CSS style end  */
+
+
+/* НАЧАЛО секции header */
+/* Стили для всего header */
+header {
+  position: fixed; /* Зафиксируем сверху */
+  width: 100%;
+  top: 0;          /* Сдвиг вверрх 0 нет */
+  left: 0;         /* Сдиг в лево 0 нет */
+  right: 0;        /* Сдвиг в право 0 нет */
+  /* background: #fff; */ /* Фон цвет белый */
+  background-color: #353535;
+  box-shadow: 0 4px 16px rgba(0,0,0,.8); /* Тень для блока */
+  padding: 1rem 5%; /* Внутренний отступ сверху/снизу0 справа/слева 8% */
+  display: flex;      /* Размещение по блока  */
+  justify-content: space-between; /* Разведем блоки по разные стороны */
+  align-items: center;     /* размещение блоков по центру осей */
+  z-index: 100;
+}
+/* Стили для Лого */
+header .logo { 
+  /* color: #151515;  */  /* цвет лого черный */
+  color: var(--main-color);
+  /* font-size: 3rem; */
+  font-size: 1.5rem; 
+  font-weight: 800;   /* насыщеность шрифта 900 */
+  transition: 0.5s;    /* плавный ховер-эфект 0.5сек*/
+}
+header .logo span {
+  color: var(--yellow-clr);
+  
+}
+header .logo:hover {
+  letter-spacing: .5rem;     /* растояние между буквами 1-3рем */
+  transform: scale(1.1);    /* эффект увеличения 1,1-1,5 */
+}
+/* блок ненумерованный списсок 6пунктов */
+header .navbar ul {
+  display: flex;
+  /* position: relative;
+  float: left; */
+  list-style: none; 
+}
+header .navbar ul li {
+  position: relative;
+}
+
+header .navbar ul li a {
+  display: block;
+  padding: 1.5rem;
+  /* color: #151515; */
+  color: var(--main-color);
+  /* font-size: calc(20px + (35 - 20) * ((100vw - 300px) / 1600 - 300)); */
+  font-size: 1.2rem;
+  transition: 0.5s;
+}
+
+header .navbar ul li a:hover {
+  /* background-color: #000; */
+  background: var(--light-blue);
+  color: var(--white);
+}
+
+header .navbar ul li ul {
+  flex-direction: column;
+  position: absolute;
+  left: 0;
+  width: 18rem;
+  background: #fff;
+  display: none;
+}
+
+header .navbar ul li ul li {
+  flex-direction: column;
+  width: 100%;
+  border: .1rem solid rgba(0,0,0,.1);
+}
+
+header .navbar ul li ul li ul {
+  position: absolute;
+  left: 18rem;
+  top: 0;
+}
+
+header .navbar ul li:hover > ul {
+  display: initial;
+}
+
+#menu {
+  display: none;
+}
+
+header label {
+  font-size: 2rem;
+  /* color: #151515; */
+  color: var(--blue);
+  cursor: pointer;
+  display: none;
+}
+/* КОНЕЦ секции header section */
+
+
+
+/* НАЧАЛО блок секции HOME-home section start */
+.home {
+  display: flex;
+  /* flex-wrap: wrap; */
+	align-items: center;
+	justify-content: center;
+  min-height: 90vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.6)), url(img/about/about-bg1.jpg) no-repeat center/cover;
+  gap: 1.5rem;      /* отступ между элементами внутри флексбокса */
+  
+}
+.home .content {
+  /* text-align: center; */
+  padding-top: 1rem;
+  flex: 10 1 40rem;     /* текст слева изображение справа */  
+}
+
+.home .content h3 {
+  color: var(--white);
+  font-size: calc(25px + (35 - 25) * ((100vw - 300px) / (1600 - 300)));
+}
+.home .content h3 span {
+  color: var(--main-color); 
+}
+.home .content p {
+  color: var(--white);
+  font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300))); 
+}
+
+
+.options {
+  display:flex;
+  flex-direction:row;
+  align-items:stretch;
+  overflow:hidden;
+
+  min-width:600px;
+  max-width:900px;
+  width:calc(100% - 100px);
+  
+  height:400px;
+  
+  @for $i from 1 through 4 {
+     @media screen and (max-width:798px - $i*80) {
+        min-width:600px - $i*80;
+        .option:nth-child(#{6-$i}) {
+           display:none;
+        }
+     }
+  }
+  .option {
+    position: relative;
+    overflow: hidden;
+
+    min-width: 60px;
+    margin: 10px;
+    border: 0.2rem solid var(--main-color);
+
+    background: var(--optionBackground, var(--defaultBackground, #e6e9ed));
+    background-size: auto 120%;
+    background-position: center;
+
+    cursor: pointer;
+
+    transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+
+    @for $i from 1 through length($optionDefaultColours) {
+      &:nth-child(#{$i}) {
+         --defaultBackground:#{nth($optionDefaultColours, $i)};
+}
+}
+    &.active {
+      flex-grow: 10000;
+      transform: scale(1);
+
+      max-width: 600px;
+      margin: 0px;
+      border-radius: 40px;
+
+      background-size: auto 100%;
+      .shadow {
+        box-shadow: inset 0 -120px 120px -120px black,
+          inset 0 -120px 120px -100px black;
+      }
+      .label {
+        bottom: 20px;
+        left: 20px;
+        .info > div {
+          left: 0px;
+          opacity: 1;
+        }
+      }
+      /* &:active {
+        transform: scale(0.9);
+      } */
+    }
+    &:not(.active) {
+      flex-grow: 1;
+
+      border-radius: 30px;
+      .shadow {
+        bottom: -40px;
+        box-shadow: inset 0 -120px 0px -120px black,
+          inset 0 -120px 0px -100px black;
+      }
+      .label {
+        bottom: 10px;
+        left: 10px;
+        .info > div {
+          left: 20px;
+          opacity: 0;
+        }
+      }
+    }
+    .shadow {
+      position: absolute;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+
+      height: 120px;
+
+      transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+    }
+    .label {
+      display: flex;
+      position: absolute;
+      right: 0px;
+
+      height: 40px;
+      transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95);
+      .icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+
+        min-width: 40px;
+        max-width: 40px;
+        height: 40px;
+        border-radius: 100%;
+
+        background-color: var(--white);
+        color: var(--main-color);
+      }
+      .info {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        margin-left: 10px;
+
+        color: var(--white);
+
+        white-space: pre;
+        > div {
+          position: relative;
+
+          transition: 0.5s cubic-bezier(0.05, 0.61, 0.41, 0.95),
+            opacity 0.5s ease-out;
+        }
+        .main {
+          font-weight: bold;
+          font-size: 1.2rem;
+        }
+        .sub {
+          transition-delay: 0.1s;
+        }
+      }
+    }
+  }
+}
+/* CodePen Home Expanding flex cards*/
+
+/* КОНЕЦ блок секции HOME-home section end */
+
+
+/* НАЧАЛО секции галерея gallery section start */
+.photo-gallery {
+  min-height: 100vh;
+  background: var(--yellow-clr);
+  text-align: center;
+    /* padding: 2rem 7%; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh; */
+    /* background: #28a3f7; */
+    
+    
+}
+
+/* Стили текстовый заголовок 2типа секции галерея*/
+.photo-gallery .heading h2 {
+    text-align: center;
+    font-size: calc(18px + (35 - 18) * ((100vw - 300px) / (1600 - 300)));
+    padding: 1rem;
+    color: var(--blue);
+
+}
+.photo-gallery .heading h2 span {
+    background: var(--blue);
+    color: var(--yellow-clr);
+    padding: 1rem;
+    border-radius: 1rem;
+    
+}
+.photo-gallery .heading p {
+    color: var(--blue);
+    font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1600 - 300)));
+    padding: 1rem; 
+
+}
+
+.gallery {
+    display: flex;
+    justify-content: center; /* элументы по центру */
+    flex-wrap: wrap;   /* Перенос флекс-элемента на новую строку */
+    max-width: 1400px;
+    /* gap: 2rem;         отступ между элементами внутри флексбокса */
+    /* width: 100%;    */          /* ширина этой секции 100% */
+    margin: 0 auto;  /* отступ сверху ноль справа слева авто */
+}
+
+.gallery a {
+    flex: 1 1 14rem;
+    /* width: 25rem;  */         /* ширина 35рем */
+    /* height: 250px; */
+    height: 10rem;         /* высота 20рем */
+    margin: 1rem;
+    border-radius: 5px;  /*скругление углов 5px */
+    border: 2px solid var(--white);
+    box-shadow: 0 4px 16px rgba(0,0,0,.8);
+    /* тень под фото */
+    overflow: hidden;   /*элементы не выходили за пределы изображения  */
+    transition: .3s;
+}
+
+.gallery a img {
+    /* display: block; */
+    width: 100%;      /* ширина */
+    height: 100%;     /* высота */
+    object-fit: cover;
+    /* object-position: 80% top;  Смещение изображения вправо */
+}
+
+/* Эфект увеличения фото */
+.gallery a img:hover {
+    transform: scale(1.1);
+}
+
+
+/* НАЧАЛО секции галерея gallery section start */
+/* .photo-gallery {
+    min-height: 100vh;
+    background: var(--yellow-clr);
+} */
+/* Стили текстовый заголовок 2типа секции галерея*/
+/* .photo-gallery .heading {
+    text-align: center;
+    font-size: calc(30px + (65 - 30) * ((100vw - 300px) / (1600 - 300)));
+    padding: 1rem;
+    color: #222;
+    margin-bottom: 3rem;
+}
+.photo-gallery .heading span {
+    background: #222;
+    color: var(--yellow-clr);
+    padding: 0.5rem;
+    border-radius: 1rem;
+} */
+/* стили для секции с фотографиями */
+/* .gallery {
+    display: flex;
+    justify-content: center; 
+    flex-wrap: wrap;   
+    gap: 2rem;        
+    width: 100%;            
+    margin: 0 auto;  
+} */
+/* .gallery a {
+    width: 25rem;         
+    height: 15rem;         
+    border-radius: 0.5rem;  
+    overflow: hidden;       
+    box-shadow: var(--box-shadow); 
+} */
+/* .gallery a img {
+    width: 100%;      
+    height: 100%;     
+    object-fit: cover;
+} */
+/* hover эфект увеличения фото на 1,3 */
+/* .gallery a img:hover {
+    transform: scale(1.3);
+} */
+/* КОНЕЦ секции галерея gallery section end */
+
+
+
+
+/* banner section start */
+.banner {
+    width: 100%;
+    min-height: 50vh;
+    background: url(img/about/about-bg.jpg) no-repeat center/cover;
+    border-image: fill 0 linear-gradient(#0008, #000);
+}
+
+.banner .content {
+    margin-top: 5%;
+}
+
+.banner .content h3 {
+    font-size: calc(25px + (35 - 25) * ((100vw - 300px) / (1600 - 300)));
+    color: var(--main-color);
+}
+
+.banner .content p {
+    max-width: 50%;
+    color: var(--white);
+    padding: 1rem 0rem;
+    font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (1600 - 300)));
+}
+
+/* banner section end */
+
+/* about section start */
+/* .about {
+    min-height: 70vh;
+    background: var(--yellow-clr);
+}
+
+.about .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+    gap: 2rem;
+}
+
+.about .box-container .img {
+    flex: 1 1 40rem;
+    padding: 2rem;
+}
+
+.about .box-container .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+
+.about .box-container .content {
+    flex: 1 1 40rem;
+    padding: 2rem; 
+}
+
+.about .box-container .content h3 {
+    font-size: calc(30px + (65 - 30) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.about .box-container .content p {
+    font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+    padding: 1rem 0rem; 
+} */
+/* about section end */
+
+/* advantages section start */
+/* .advantages {
+    min-height: 60vh;
+}
+
+.advantages .content {
+    color: #fff;
+    text-align: center;
+}
+
+.advantages .content h3 {
+    font-size: calc(30px + (65 - 30) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.advantages .content p {
+    font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+    padding: 1rem 0rem; 
+    padding: 1rem 0rem;
+    margin-bottom: 5rem; 
+}
+
+.advantages .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.advantages .box-container .box {
+    flex: 1 1 25rem;
+    padding: 2rem;
+    background: #fff;
+    margin: 1rem;
+    text-align: center;
+    border: .5rem solid var(--yellow-clr);
+    box-shadow: var(--box-shadow);
+}
+
+.advantages .box-container .box h4 {
+    font-size: calc(14px + (20 - 14) * ((100vw - 300px) / (1600 - 300)));
+    margin: 1rem;
+}
+
+.advantages .box-container .box p {
+    font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+} */
+/* advantages section end */
+
+
+/* people section start */
+/* .people {
+    min-height: 60vh;
+    background: url(img/about/people.jpg) no-repeat center/cover;
+    border-image: fill 0 linear-gradient(#0005, #000);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.people h3 {
+    font-size: calc(30px + (65 - 30) * ((100vw - 300px) / (1600 - 300)));
+    color: #fff;
+}
+
+.people h3 span {
+    color: var(--yellow-clr);
+} */
+/* people section end */
+
+
+/* footer section start */
+.footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.footer .copyright {
+    margin-top: 3rem;
+    color: var(--yellow-clr);
+    font-size: calc(12px + (15 - 12) * ((100vw - 300px) / (1600 - 300))); 
+}
+
+.footer .copyright span {
+    color: var(--blue);
+}
+
+.footer .copyright a {
+  color: var(--white);
+  text-decoration: underline;
+}
+/* footer section end */
+
+
+/* scroll top button  */
+.scroll-top {
+  position: fixed;
+  right: 2rem;
+  bottom: 3rem;
+  height: 4rem;
+  width: 4rem;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 0.2rem rgba(59, 56, 235, 0.2);
+  z-index: 100;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(3rem);
+  transition: all 0.3s ease-in-out;
+  cursor: pointer;
+}
+.scroll-top i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 1.8rem;
+  color: var(--main-color);
+  transition: color 0.3s ease-in-out;
+}
+.scroll-top svg path {
+  fill: none;
+  stroke: var(--main-color);
+  stroke-width: 4;
+  transition: stroke 0.3s ease-in-out;
+}
+.scroll-top.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+
+
+/* Адаптпция правило медиа-запросы media queries */
+@media (max-width: 1200px) {
+  html {
+      font-size: 55%;
+  }
+}
+@media (max-width: 991px) {
+  header {
+      padding: 2rem;
+  }
+  header label {
+      display: initial;
+  }
+  header .navbar {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      right: 0;
+      background: #fff;
+      border-top: .1rem solid rgba(0,0,0,.1);
+      display: none;
+  }
+  header .navbar ul {
+      flex-direction: column;
+  }
+  header .navbar ul li {
+      flex-direction: column;
+      width: 100%;
+  }
+  header .navbar ul li ul {
+      position: relative;
+      width: 100%;
+  }
+  header .navbar ul li ul li {
+      /* background: #999; */
+      background: #b3ddf2;
+  }
+  header .navbar ul li ul li ul {
+      position: relative;
+      width: 100%;
+      left: 0;
+  }
+  header .navbar ul li ul li ul li {
+      /* background: #777; */
+      background: #7db8d3;
+  }
+
+  #menu:checked ~ .navbar {
+      display: initial;
+  }
+  label .fa-times {
+      display: none;
+  }
+
+  #menu:checked ~ label .fa-bars {
+      display: none;
+  }
+  #menu:checked ~ label .fa-times {
+      display: block;
+  }
+
+  section {
+      padding: 0 3%;
+      padding-top: 8rem;
+  }
+  .home {
+      flex-flow: column-reverse;
+      padding-top: 7rem;
+  }.home .img img {   /* Изображение при адаптации */
+      width: 100%;   /* Размер изображения при адаптации */
+  }
+  .home .content h2 {    /* Заголовок 2типа при */
+      font-size: 3.5rem; /* Размер щрифта при адаптации */
+  }
+  .home.content p {
+      font-size: 1.5rem;
+  }
+  .home .content .btn {
+      margin-bottom: 3rem;
+  }
+}
+
+@media (max-width: 450px) {
+  html {
+      font-size: 50%;
+  }
+}
+
+
+/* media queries */
+
+@media (max-width: 860px) {
+    .footer .menu {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+}
